@@ -1,0 +1,10 @@
+<div class="learning-wrapper" >
+  <mat-card *ngFor="let data of policyData">
+    <mat-card-header>
+      <h3>{{data.name}}</h3>
+    </mat-card-header>
+    <mat-card-content>
+      <a href="{{data.avatar}}">Visit here</a>
+    </mat-card-content>
+  </mat-card>
+</div>

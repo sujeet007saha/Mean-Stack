@@ -1,0 +1,28 @@
+<ng-container class="ng-container">
+  <div class="login-wrapper">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Timesheet</mat-card-title>
+      </mat-card-header>
+
+      <form class="example-form" [formGroup]="timeForm" (submit)="fillTime()">
+        <mat-card-content>
+          <mat-form-field>
+            <input matInput placeholder="Enter Time" formControlName="time" type="text" >
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="effortdate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placeholder="Enter your efforts" rows="6" cols="" formControlName="efforts"></textarea>
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-raised-button color="primary" type="submit" class="btn">Submit</button>
+        <button mat-raised-button color="primary" class="btn mx-5" [routerLink]="['efforts']">View Attendance</button>
+      </form>
+    </mat-card>
+  </div>
+
+</ng-container>

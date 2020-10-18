@@ -1,0 +1,38 @@
+<mat-toolbar color="primary"  *ngIf = "userService.isLoggedIn()">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <a class="logo" [routerLink]="'/'">F I C A S</a>
+    <span class="menu-spacer"></span>
+    <div class="search">
+      <input type="text" name="search" placeholder="FINDER..">
+    </div>
+    <div >
+      <small>Welcome {{userName}}</small>
+    </div>
+    <div >
+      <a  mat-button  (click)="userService.logout()">Logout</a>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="'/timesheet'" (click)="sidenav.toggle()"> MyTime </a>
+      <a mat-list-item [routerLink]="'/mydata'" (click)="sidenav.toggle()"> MyData </a>
+      <a mat-list-item [routerLink]="'/mylearning'" (click)="sidenav.toggle()"> MyLearning </a>
+      <a mat-list-item [routerLink]="'/finder'" (click)="sidenav.toggle()"> Finder </a>
+      <a mat-list-item [routerLink]="'/myhelpline'" (click)="sidenav.toggle()"> Helpline </a>
+      <a mat-list-item [routerLink]="'/policy/view-policy'" (click)="sidenav.toggle()"> Policies </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

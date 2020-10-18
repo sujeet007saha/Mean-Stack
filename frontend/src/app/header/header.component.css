@@ -1,0 +1,30 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.search{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.search input[type=text] {
+  width: 20rem;
+  opacity: 0.9;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.search input[type=text]:focus {
+  width: 70%;
+  opacity: 1;
+  border: none;
+  border-color: white;
+}
+
+.logo {
+  color: white;
+}

@@ -1,0 +1,8 @@
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+mat-form-field {
+  margin-top: 2%;
+}

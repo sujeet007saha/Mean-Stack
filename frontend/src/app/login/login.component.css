@@ -1,0 +1,29 @@
+.example-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: wheat;
+}
+
+mat-card{
+ width: 50%;
+ height: 40%;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: center;
+}
+
+.form-field{
+  display: block;
+  width: 80%;
+  margin: auto;
+
+}
+
+button {
+  display: block;
+
+}

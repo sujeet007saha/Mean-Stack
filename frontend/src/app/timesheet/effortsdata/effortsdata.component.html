@@ -1,0 +1,27 @@
+<div class="mat-elevation-z8">
+  <mat-form-field class="filter">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search">
+  </mat-form-field>
+  <button mat-button color="primary" (click)="convetToPDF()">Convert</button>
+
+  <table  id="contentToConvert" mat-table [dataSource]="categoriesDataSource">
+    <!-- Position Column -->
+    <ng-container matColumnDef="Date">
+      <th mat-header-cell *matHeaderCellDef>Date</th>
+      <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Time">
+      <th mat-header-cell *matHeaderCellDef>Time</th>
+      <td mat-cell *matCellDef="let element">{{ element.time }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Efforts">
+      <th mat-header-cell *matHeaderCellDef>Efforts</th>
+      <td mat-cell *matCellDef="let element">{{ element.efforts }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedCategories"></tr>
+    <tr mat-row *matRowDef="let row; columns:displayedCategories"></tr>
+  </table>
+  <mat-paginator #paginator class="paginator-style" [pageSizeOptions]="[5]"  showFirstLastButtons></mat-paginator>
+</div>

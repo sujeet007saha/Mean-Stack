@@ -1,0 +1,11 @@
+<div class="learning-wrapper" >
+  <mat-card *ngFor="let data of learningData">
+    <mat-card-header>
+      <h3>{{data.courseName}}</h3>
+    </mat-card-header>
+    <img mat-card-lg-image  src="assets/4.jpg">
+    <mat-card-content>
+      <a href="{{data.courseLink}}">Visit here</a>
+    </mat-card-content>
+  </mat-card>
+</div>

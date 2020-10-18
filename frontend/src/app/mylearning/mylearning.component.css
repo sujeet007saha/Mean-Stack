@@ -1,0 +1,21 @@
+.learning-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: wheat;
+  justify-content: center;
+}
+
+mat-card {
+  width: 23rem;
+  margin: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.learning-wrapper mat-card a {
+ display: flex;
+ justify-content: center;
+ margin-top: 1rem;
+}

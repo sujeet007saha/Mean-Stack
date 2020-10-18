@@ -1,0 +1,46 @@
+<ng-container class="ng-container">
+  <div class="profile-wrapper">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Profile</mat-card-title>
+      </mat-card-header>
+      <img mat-card-md-image src="assets/sujeetphoto.jpg" />
+     <!-- <form class="example-form"> -->
+        <mat-card-content>
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput value="{{userData.firstname}}"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput value="{{userData.lastname}}"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Employee No</mat-label>
+            <input matInput value="{{userData.employeeno}}"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Gpn No</mat-label>
+            <input matInput value="{{userData.gpnno}}"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email Id</mat-label>
+            <input matInput value="{{userData.email}}"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Project</mat-label>
+            <input matInput value="{{userData.projectname}}"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Asset Indent No</mat-label>
+            <input matInput value="{{userData.assetno}}"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <textarea matInput rows="3" cols="" value="{{userData.address}}"></textarea>
+          </mat-form-field>
+        </mat-card-content>
+
+    </mat-card>
+  </div>
+</ng-container>

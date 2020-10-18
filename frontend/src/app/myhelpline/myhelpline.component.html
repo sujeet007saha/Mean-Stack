@@ -1,0 +1,27 @@
+<ng-container class="ng-container">
+  <div class="helpline-wrapper">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Timesheet</mat-card-title>
+      </mat-card-header>
+
+      <form class="example-form" [formGroup]="helpForm" (submit)="logIssue()">
+        <mat-card-content>
+          <mat-form-field appearance="outline">
+            <mat-label>Select Category</mat-label>
+            <mat-select formControlName="issueCat" required>
+              <mat-option>None</mat-option>
+              <mat-option *ngFor="let cat of helpCat" [value]="cat.name" >{{cat.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Log Issue</mat-label>
+            <textarea matInput rows="6" cols="" formControlName="issueDesc" required></textarea>
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-raised-button color="primary" type="submit" class="btn">Submit</button>
+      </form>
+    </mat-card>
+  </div>
+</ng-container>
+
